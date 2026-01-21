@@ -1,0 +1,12 @@
+{
+    "scripts": {
+        "dev": "node --watch server.js"
+    },
+    "dependencies": {
+        "express": "^5.2.1",
+        "module-alias": "^2.2.3"
+    },
+    "_moduleAliases": {
+        "@": "./src"
+    }
+}
