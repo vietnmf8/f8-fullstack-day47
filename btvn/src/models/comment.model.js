@@ -27,7 +27,7 @@ const commentModel = {
         const newComment = {
             id: nextId,
             ...data,
-            createAt: new Date().toISOString(),
+            createdAt: new Date().toISOString(),
         };
 
         comments.push(newComment);

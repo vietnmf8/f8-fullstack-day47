@@ -19,7 +19,7 @@ const commentController = {
     },
 
     /* Tạo comment mới */
-    create: (res, req) => {
+    create: (req, res) => {
         const { postId, content } = req.body;
         if (!postId || !content)
             return res
@@ -42,7 +42,7 @@ const commentController = {
     delete: (req, res) => {
         const isDeleted = commentModel.delete(req.params.id);
         if (!isDeleted)
-            res.status(404).json({ message: "Không tìm thấy Comment" });
+            return res.status(404).json({ message: "Không tìm thấy Comment" });
         // Trả về 204 No Content khi xoá thành công
         return res.status(204).send();
     },
